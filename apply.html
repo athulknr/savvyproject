@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/apply.css">
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Apply</title>
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+      <!-- Additional CSS Files -->
+      <link rel="stylesheet" href="assets/css/fontawesome.css">
+      <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
+      <link rel="stylesheet" href="assets/css/owl.css">
+      <link rel="stylesheet" href="assets/css/apply.css">
+      
+      <script>
+          function validateForm() {
+              // Retrieve the form element
+              var form = document.getElementById("applyForm");
+              
+              // Check if the form is valid
+              if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+              }
+              
+              form.classList.add('was-validated');
+          }
+      </script>
+  </head>
+  <body>
+      <div class="container mt-5">
+          <div class="row justify-content-center">
+              <div class="col-md-6">
+                  <h1 class="text-center mb-4">Apply for a Job</h1>
+                  <!-- <form id="applyForm" class="needs-validation" action="save_data.php" method="POST" > -->
+                    <form id="applyForm" class="needs-validation" action="save_data.php" method="POST" enctype="multipart/form-data">
+                      <input type="file" name="file" class="form-control-file">
+
+                      <div class="form-group">
+                          <label for="exampleInputName">Full Name</label>
+                          <input type="text" name="fullname" class="form-control" id="exampleInputName" placeholder="Enter your name and surname" required>
+                          <div class="invalid-feedback">
+                              Please enter your name.
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address" required>
+                          <div class="invalid-feedback">
+                              Please enter a valid email address.
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="inputAddress">Address</label>
+                          <input type="text" name="address" class="form-control" id="inputAddress" placeholder="Enter your Address" required>
+                          <div class="invalid-feedback">
+                              Please enter your address.
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="form-group col-md-6">
+                              <label for="inputCity">City</label>
+                              <input type="text" name="city" class="form-control" id="inputCity" placeholder="your city" required>
+                              <div class="invalid-feedback">
+                                  Please enter your city.
+                              </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="inputZip">Zip</label>
+                              <input type="text" name="zip" class="form-control" id="inputZip" placeholder="code" required>
+                              <div class="invalid-feedback">
+                                  Please enter your zip code.
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="example-tel-input">Telephone</label>
+                          <input class="form-control">
+                      </div>
+  
+                    <div class="form-group mt-3">
+                        <label>Upload your CV:</label>
+                        <input type="file" name="file" class="form-control-file">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "0c686304-e40f-4541-9ef8-46e367bc9da1", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "c7263c88-0236-46a5-8a94-1df8047392a5", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</body>
+</html>
